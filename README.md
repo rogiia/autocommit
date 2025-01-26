@@ -30,6 +30,8 @@ Commit Helper is a utility that assists in generating commit messages based on t
     source ~/.bashrc
     ```
 
+5. This tool works with Ollama running locally. Ensure Ollama is running on your machine before using this tool. You can download Ollama [here](https://ollama.com/download).
+
 ## Usage
 
 1. Make changes to your repository as usual.
