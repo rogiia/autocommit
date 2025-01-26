@@ -21,7 +21,7 @@ Commit Helper is a utility that assists in generating commit messages based on t
 
 3. Make the script executable:
     ```sh
-    chmod +x commit
+    chmod +x autocommit
     ```
 
 4. Add the script to your PATH by updating your shell configuration file (e.g., `.bashrc`, `.zshrc`):
@@ -36,7 +36,7 @@ Commit Helper is a utility that assists in generating commit messages based on t
 
 2. Run the Commit Helper script:
     ```sh
-    commit
+    autocommit
     ```
 
 3. The script will display the generated commit message and prompt you to confirm if it is acceptable:
@@ -51,7 +51,7 @@ Commit Helper is a utility that assists in generating commit messages based on t
 By default, the Commit Helper uses the `qwen2.5:14b` model. You can specify a different model by passing the `model_id` argument to the shell script:
 
 ```sh
-commit <your-model-id>
+autocommit <your-model-id>
 ```
 
 ## Recommended Model
