@@ -1,0 +1,22 @@
+#!/bin/sh
+BASEDIR=$(dirname $0)
+source $BASEDIR/env/bin/activate
+
+MODEL_ID="qwen2.5:14b"
+if [ ! -z "$1" ]; then
+    MODEL_ID=$1
+fi
+
+COMMIT_MSG=$(git diff | python $BASEDIR/commit.py --model_id $MODEL_ID)
+echo "$COMMIT_MSG"
+read -p "Is this commit message OK? (y/n): " -n 1 -r
+echo ""
+
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    git add .
+    echo "$COMMIT_MSG" | git commit -F -
+else
+    echo "Commit aborted."
+    exit 1
+fi
